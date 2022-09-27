@@ -2585,10 +2585,13 @@
  
  
 
-var array = posts;
- array.splice(4,0, '<section id="Cachacas" data-id="17492" class="tituloCategoria"><p style="font-weight: bold; font-size: 1.6em; display:flex;  margin: 15px 500px 5px; text-align: center;">Cachaças</p></section>');
-
-    document.getElementById("posts").innerHTML += postsHtml;
+    var postsHtml = posts;
+    function attArr(){
+        postsHtml.splice(4,0, '<div id="Cachacas" data-id="17492" class="tituloCategoria"><p style="font-weight: bold; font-size: 1.6em; display:flex;  margin: 15px 500px 5px; text-align: center;">Cachaças</p></div>');  
+        return postsHtml;
+    };
+    
+    document.getElementById("posts").innerHTML += attArr();
 
     document.getElementById("posts").innerHTML += array[4];
 
